@@ -1,0 +1,95 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Clement Dessole" content="ColorLife">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <title>ColorLife</title>
+    <link rel="icon" type="image/png" href="images/Icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+</head>
+
+<body>
+    <section class="hero is-dark">
+            <nav class="navbar">
+                <div class="container">
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                      <div class="navbar-brand">
+                        <a class="navbar-item" href="{{ url_for('main.index') }}">
+                          <img class="icon_pos" src="images/Icon.png" alt="Logo">
+                          <h6 href="{{ url_for('main.index') }}" class="subtitle"><strong>ColorLife</strong></h6>
+                        </a>
+                      </div>
+                        <div class="navbar-end">
+                            <a href="{{ url_for('main.index') }}" class="navbar-item">
+                                Home
+                            </a>
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('main.profile') }}" class="navbar-item">
+                                Profile
+                            </a>
+                            {% endif %}
+                            {% if not current_user.is_authenticated %}
+                            <a href="{{ url_for('auth.login') }}" class="navbar-item">
+                                Login
+                            </a>
+                            <a href="{{ url_for('auth.signup') }}" class="navbar-item">
+                                Sign Up
+                            </a>
+                            {% endif %}
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('auth.logout') }}" class="navbar-item">
+                                Logout
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    </section>
+
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+               {% block content %}
+               {% endblock %}
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="hero is-light ">
+        <div class="container">
+          <div class="content has-text-dark has-text-centered">
+            <p>
+              <strong>ColorLife</strong> by Clement Dessole - 2019
+            </p>
+            <p>
+              <a class="icon has-text-black" href="https://github.com/cydessole" target="_blank">
+                <i class="fa fa-globe"></i>
+              </a>
+              <a class="icon has-text-black" href="https://github.com/cydessole" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+              <a class="icon has-text-black" href="mailto:cydessole@github.user" target="_blank">
+                <i class="fa fa-envelope"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+    </div>
+    </section>
+
+</body>
+
+
+</html>
