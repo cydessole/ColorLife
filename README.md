@@ -24,6 +24,7 @@ An application to add colors to portraiture photos !
 </p>
 
 ## Informations
+0. You can go to https://colorlifeapp.herokuapp.com
 1. Signup to use the app
 2. Go to the profile page
 3. Select the image you want to apply colors and click on the pay with card button
