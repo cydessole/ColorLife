@@ -57,6 +57,6 @@ You have to run this script in the github directory not in project
 $ flask run
 ```
 
-### Want to learn More
+### Acknowledgments
 Check the Jupyter notebook in the github folder to see a bit more about the algorithm behind it.
-I learn a lot thanks to <a href=https://github.com/emilwallner>Emil Wallner</a>.
+The base model is a reproduction of <a href=https://github.com/emilwallner>Emil Wallner</a>. coloring greyscale images project
