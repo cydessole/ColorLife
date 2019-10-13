@@ -1,2 +1,2 @@
-web: gunicorn project:app
+web: gunicorn main:app
 
