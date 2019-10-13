@@ -57,6 +57,9 @@ def profile():
             New_Photo=model_predict(image_file,model,graph)
             del image_file
             APP_ROOT = os.path.dirname(__file__)
+            DIR_PATH=os.path.join(APP_ROOT, 'static/result')
+            if not os.path.exists(DIR_PATH):
+                os.makedirs(DIR_PATH)
             FILE_PATH = os.path.join(APP_ROOT, 'static/result/photo.png')
             imsave(FILE_PATH, New_Photo)
             upload = True
