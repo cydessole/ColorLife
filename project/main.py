@@ -58,8 +58,8 @@ def profile():
             del image_file
             APP_ROOT = os.path.dirname(os.path.abspath(__file__))
             FILE_PATH = os.path.join(APP_ROOT, 'static/result/photo.png')
-            if FILE_PATH.is_file():
-                os.remove(FILE_PATH)
+            #if FILE_PATH.is_file():
+            #    os.remove(FILE_PATH)
             imsave(FILE_PATH, New_Photo)
             upload = True
             #except Exception:
