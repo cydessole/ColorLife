@@ -20,7 +20,7 @@ An application to add colors to portraiture photos !
 </p>
 
 <p align="center">
-  <img src="github/Profile_Page.pmg" width="600px" alt="Profile Page">
+  <img src="github/Profile_Page.png" width="600px" alt="Profile Page">
 </p>
 
 ## Informations
