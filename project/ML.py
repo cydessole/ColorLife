@@ -27,11 +27,20 @@ def closest_power(x):
     else :
         return value
 
+def closest_power_abs(x):
+    up=abs(np.power(2,ceil(log(x,2)))-x)
+    down=abs(np.power(2,floor(log(x,2)))-x)
+    if up==min(down,up) and up!=down :
+        value= np.power(2,ceil(log(x,2)))
+    else:
+        value= np.power(2,floor(log(x,2)))
+    return value
+
 def model_predict(Photo,model,graph):
     im = Image.open(Photo)
     width, height = im.size
-    width_2=closest_power(width)
-    height_2=closest_power(height)
+    width_2=closest_power_abs(width)
+    height_2=closest_power_abs(height)
     print(width_2,height_2)
     color_me=[]
     color_me.append(img_to_array(load_img(Photo,target_size=(width_2,height_2))))
