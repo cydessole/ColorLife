@@ -12,15 +12,15 @@ An application to add colors to portraiture photos !
 
 
 <p align="center">
-  <img src="github/Home_Page" width="600px" alt="Home Page">
+  <img src="github/Home_Page.png" width="600px" alt="Home Page">
 </p>
 
 <p align="center">
-  <img src="github/Login_Page" width="600px" alt="Login Page">
+  <img src="github/Login_Page.png" width="600px" alt="Login Page">
 </p>
 
 <p align="center">
-  <img src="github/Profile_Page" width="600px" alt="Profile Page">
+  <img src="github/Profile_Page.pmg" width="600px" alt="Profile Page">
 </p>
 
 ## Informations
