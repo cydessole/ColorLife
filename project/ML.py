@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from PIL import Image
-import cv2
 from keras.models import load_model
 from keras.preprocessing.image import array_to_img, img_to_array, load_img
 from skimage.color import rgb2lab, lab2rgb, rgb2gray, xyz2lab
 from skimage.io import imsave
+from skimage.transform import  resize
 from keras import backend as K
 import tensorflow as tf
 
@@ -45,6 +45,6 @@ def model_predict(Photo,model,graph):
             cur = np.zeros((width_2, height_2, 3))
             cur[:,:,0] = color_me[i][:,:,0]
             cur[:,:,1:] = output[i]
-            cur=cv2.resize(cur,(width,height))
+            cur=resize(cur,(height,width))
             Photo_color=lab2rgb(cur)
             return Photo_color
