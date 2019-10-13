@@ -10,7 +10,7 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__,static_url_path = "", static_folder = "static")
 
-    app.config['SECRET_KEY'] = '9OLWxND4o83j4K4iuopO'
+    app.config['SECRET_KEY'] = 'KJlmIYHLWxND4o83HRJIshxVGetj4K4iuopO'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
     app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
