@@ -59,4 +59,4 @@ $ flask run
 
 ### Acknowledgments
 Check the Jupyter notebook in the github folder to see a bit more about the algorithm behind it.
-The base model is a reproduction of <a href=https://github.com/emilwallner>Emil Wallner</a>. coloring greyscale images project
+The base model is a reproduction of <a href=https://github.com/emilwallner>Emil Wallner</a> coloring greyscale images project
