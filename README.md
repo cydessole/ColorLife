@@ -46,7 +46,7 @@ $ pip install -r requirements.txt
 ### Environnment
 
 ```shell
-$ FLASK_APP=project
+$ export FLASK_APP=project
 $ export STRIPE_PUBLISHABLE_KEY=<YOUR_STRIPE_PUBLISHABLE_KEY>
 $ export STRIPE_SECRET_KEY=<YOUR_STRIPE_SECRET_KEY>
 ```
