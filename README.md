@@ -58,4 +58,4 @@ $ flask run
 
 ### Want to learn More
 Check the Jupyter notebook in the github folder to see a bit more about the algorithm behind it.
-I learn a lot thanks to <a href https://github.com/emilwallner>Emil Wallner</a>.
+I learn a lot thanks to <a href=https://github.com/emilwallner>Emil Wallner</a>.
