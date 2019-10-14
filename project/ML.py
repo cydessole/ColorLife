@@ -36,11 +36,25 @@ def closest_power_abs(x):
         value= np.power(2,floor(log(x,2)))
     return value
 
+def closest_ratio(size,size_2):
+    mini=9999
+    for i in range(5,105,5):
+        bool_mini=False
+        if abs(np.round(size*i/100)-size_2)<=mini :
+            bool_mini=True
+            mini=abs(np.round(size*i/100)-size_2)
+        if bool_mini:
+            value=np.ceil(size*i/100)
+    return value, value/size
+
 def model_predict(Photo,model,graph):
     im = Image.open(Photo)
     width, height = im.size
-    width_2=closest_power_abs(width)
-    height_2=closest_power_abs(height)
+    width_2=closest_power(width)
+    height_2=closest_power(height)
+    w_ratio,ratio=closest_ratio(width,width_2)
+    h_ratio=np.ceil(height*ratio)
+    print(height,width)
     print(width_2,height_2)
     color_me=[]
     color_me.append(img_to_array(load_img(Photo,target_size=(width_2,height_2))))
@@ -54,6 +68,8 @@ def model_predict(Photo,model,graph):
             cur = np.zeros((width_2, height_2, 3))
             cur[:,:,0] = color_me[i][:,:,0]
             cur[:,:,1:] = output[i]
-            cur=resize(cur,(height,width))
-            Photo_color=lab2rgb(cur)
+            cur=resize(cur,(h_ratio,w_ratio))
+            #cur=resize(cur,(height,width))
+            Photo_color=lab2rgb(cur)*255
+            Photo_color=Photo_color.astype(np.uint8)
             return Photo_color
