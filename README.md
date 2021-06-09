@@ -28,7 +28,7 @@ An application to add colors to portraiture photos !
 1. Signup to use the app
 2. Go to the profile page
 3. Select the image you want to apply colors and click on the pay with card button
-4. Stripe is in test mode (email: admin@admin.com, card number: 4242 4242 4242 4242, date: 12/20 and cvc 123)
+4. Stripe is in test mode (email: admin@admin.com, card number: 4242 4242 4242 4242, date: any future date and cvc 123)
 
 ## Local Installation
 
